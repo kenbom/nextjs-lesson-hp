@@ -4,6 +4,17 @@ import Image from 'next/image'
 
 export default function Layout({ children, title = "HP by Nextjs" }) {
   return (
+    <>
+      <box className="flex flex-row justify-left items-center m={10}">
+        <header>
+        <Image
+          src="/logo.svg"
+          width={200}
+          height={40}
+        />
+        </header>
+      </box>
+
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono">
       <Head>
         <title>{title}</title>
@@ -31,6 +42,8 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
           </div>
         </nav>
       </header>
+ 
+      {/* <main className="flex flex-1 justify-center items-center flex-row w-screen"> */}
       <main className="flex flex-1 justify-center items-center flex-col w-screen">
         {children}
       </main>
@@ -47,5 +60,6 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
         </a>
       </footer>
     </div>
+    </>
   );
 }

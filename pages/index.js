@@ -1,8 +1,12 @@
 import Layout from "../components/Layout";
+import ModernLayout from "../components/ModernLayout";
+import Image from "next/image"
+
 export default function Home() {
   return (
     <Layout title="Home">
-      <p className="text-4xl">Welcome to Nextjs</p>
+      <ModernLayout/>
+      <p className="text-xl">Welcome to Nextjs</p>
     </Layout>
   );
 }
