@@ -1,30 +1,20 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from 'next/image'
+import ModernLayout from "./ModernLayout";
 
 export default function Layout({ children, title = "HP by Nextjs" }) {
   return (
-    <>
-      <box className="flex flex-row justify-left items-center m={10}">
-        <header>
-        <Image
-          src="/logo.svg"
-          width={200}
-          height={40}
-        />
-        </header>
-      </box>
-
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono">
       <Head>
         <title>{title}</title>
       </Head>
-      <header>
-        <nav className="bg-gray-800 w-screen">
-          <div className="flex items-center pl-8 h-14">
-            <div className="flex space-x-4">
+      <header >
+        <nav className="bg-gray-800 w-screen" >
+          <div className="flex items-center pl-8 h-14" >
+            <div className="flex space-x-4" >
               <Link href="/">
-                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded mt={300}" >
                   Home
                 </a>
               </Link>
@@ -60,6 +50,5 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
         </a>
       </footer>
     </div>
-    </>
   );
 }
